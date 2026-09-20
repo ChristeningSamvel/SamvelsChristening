@@ -1,0 +1,106 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body {
+  background-image: url("./background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero{min-height:100vh;display:grid;place-items:center;padding:30px;background:radial-gradient(circle at 50% 35%,#7b3d76 0,#351b40 35%,#120b1c 75%);position:relative}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.08) 50%,transparent 80%);animation:shine 7s infinite}.hero-card{text-align:center;position:relative;z-index:1;padding:60px 35px;max-width:800px}.eyebrow{letter-spacing:6px;font-size:12px;opacity:.8;margin-bottom:22px}.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(70px,13vw,150px);line-height:.75;margin:0;font-weight:600}.hero h1 span{font-style:italic}.hero-name{font-size:25px;letter-spacing:5px;margin:38px 0 10px}.hero-date{opacity:.85;letter-spacing:3px}.button{display:inline-block;margin-top:28px;padding:15px 27px;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#fff;text-decoration:none;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);transition:.3s}.button:hover{transform:translateY(-3px);background:rgba(255,255,255,.2)}main{max-width:1050px;margin:auto}.intro,.gallery,.location,.rsvp{padding:110px 28px}.intro{text-align:center;max-width:760px;margin:auto}.ornament{font-size:25px;margin-bottom:15px}.intro h2,.section-title h2{font-family:"Cormorant Garamond",serif;font-size:55px;margin:0 0 20px}.intro p,.rsvp>p{line-height:1.9;color:#d8cddd}.section-title{display:flex;align-items:center;gap:18px;margin-bottom:35px}.section-title span{font-size:12px;letter-spacing:3px;opacity:.5}.photos{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:18px}.photo{height:370px;border-radius:24px;overflow:hidden;background:#2b1931}.photo.tall{height:440px;margin-top:-35px}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}.photo:hover img{transform:scale(1.06)}.hint{font-size:12px;opacity:.45;margin-top:20px}.location{display:grid;place-items:center}.location-card{width:min(700px,100%);text-align:center;padding:65px 30px;border:1px solid rgba(255,255,255,.15);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.02))}.location-card .section-title{justify-content:center}.place{font-family:"Cormorant Garamond",serif;font-size:42px;margin:10px}.outline{background:transparent}.rsvp{max-width:720px;margin:auto}.rsvp form{margin-top:35px}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{display:block;font-size:12px;letter-spacing:1px;margin-bottom:18px;color:#ddd}input,select{width:100%;margin-top:9px;padding:17px 16px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07);color:#fff;outline:none;font:inherit}select option{color:#111}.submit{cursor:pointer;font:inherit}.success{display:none;margin-top:25px;padding:18px;border-radius:14px;background:rgba(130,220,170,.12);border:1px solid rgba(130,220,170,.3);text-align:center}footer{text-align:center;padding:50px 20px;opacity:.45;font-size:11px;letter-spacing:2px}.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}.sparkles{position:fixed;inset:0;pointer-events:none;z-index:5;background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 1.5px);background-size:120px 120px;opacity:.18;animation:float 12s linear infinite}@keyframes float{to{background-position:0 120px}}@keyframes shine{0%,100%{transform:translateX(-40%)}50%{transform:translateX(40%)}}@media(max-width:700px){.hero-card{padding:40px 15px}.hero-name{font-size:18px}.intro,.gallery,.location,.rsvp{padding:75px 20px}.intro h2,.section-title h2{font-size:43px}.photos{grid-template-columns:1fr 1fr}.photo{height:240px}.photo.tall{height:280px;margin-top:0}.photo:last-child{display:none}.field-row{grid-template-columns:1fr}} .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.hero-card,
+.intro,
+.gallery,
+.location,
+.rsvp,
+footer {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+body {
+  background-image: url("./background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000;
+}
+
+.hero,
+.intro {
+  background: transparent !important;
+  color: #000 !important;
+}
+/* ===== НАСТРОЙКА ФОНА И ТЕКСТА ===== */
+
+body {
+  background-image: url("./background.jpeg") !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000;
+}
+
+/* Убираем фиолетовый фон первой секции */
+.hero {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+/* Чёрный текст первой части */
+.hero-card,
+.hero h1,
+.hero-name,
+.hero-date,
+.eyebrow {
+  color: #000 !important;
+}
+
+/* Чёрный текст второй части */
+.intro,
+.intro h2,
+.intro p,
+.ornament,
+.gallery,
+.gallery h2,
+.gallery p,
+.location,
+.location h2,
+.location p,
+.location-card,
+.place,
+.rsvp,
+.rsvp h2,
+.rsvp p,
+footer {
+  color: #000 !important;
+}
+
+/* Поля формы */
+label {
+  color: #000 !important;
+}
+
+input,
+select {
+  color: #000 !important;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Кнопки */
+.button {
+  color: #000 !important;
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Карточка места */
+.location-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}

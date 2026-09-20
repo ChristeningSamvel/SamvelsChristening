@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sparkles" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="hero-card reveal">
+    <div class="eyebrow">Դուք հրավիրված եք</div>
+    <h1><span>Մկրտության</span><br>Տոնակատարություն</h1>
+    <p class="hero-name"></p>
+    <p class="hero-date">29.09.26</p> · 18:00</p>
+    <a class="button" href="#rsvp">RSVP</a>
+  </div>
+</header>
+
+<main>
+  <section class="intro reveal">
+    <div class="ornament">✦</div>
+    <h2>I’d love to see you!</h2>
+    <p>Join me for a special day filled with music, delicious food, great vibes, and unforgettable moments.</p>
+  </section>
+
+  <section class="gallery reveal">
+    <div class="section-title"><span>01</span><h2>Our Moments</h2></div>
+    <div class="photos">
+      <div class="photo"><img src="./photo1.jpeg" alt="Photo 1"></div>
+      <div class="photo tall"><img src="./photo2.jpeg" alt="Photo 2"></div>
+      <div class="photo"><img src="./photo3.jpeg" alt="Photo 3"></div>
+    </div>
+    <p class="hint"></p>
+  </section>
+
+  <section class="location reveal">
+    <div class="location-card">
+      <div class="section-title"><span>02</span><h2>The Venue</h2></div>
+      <p class="place">Cafe Venice</p>
+      <p>Yerevan</p>
+      <a class="button outline" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/place/Cafe+Venice/@40.1972718,44.5220593,17z/data=!3m1!4b1!4m6!3m5!1s0x406abd25bf111437:0xd0685916e15880a1!8m2!3d40.1972718!4d44.5220593!16s%2Fg%2F11c1xdngvr?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D">Open in Google Maps ↗</a>
+    </div>
+  </section>
+
+  <section id="rsvp" class="rsvp reveal">
+    <div class="section-title"><span>03</span><h2>Will you be there?</h2></div>
+    <p>Fill out the form so I know how many guests to expect.</p>
+    <form id="rsvpForm">
+      <div class="field-row">
+        <label>First Name<input required name="firstName" placeholder="Your first name"></label>
+        <label>Last Name<input required name="lastName" placeholder="Your last name"></label>
+      </div>
+      <label>Number of Guests
+        <select name="guests">
+          <option value="1">1 guest(s)</option>
+          <option value="2">2 guest(s)а</option>
+          <option value="3">3 guest(s)а</option>
+          <option value="4">4 guest(s)а</option>
+          <option value="5">5 guest(s)</option>
+          <option value="6">6 guest(s)</option>
+        </select>
+      </label>
+      <button class="button submit" type="submit">I’ll be there! ✦</button>
+    </form>
+    <div id="success" class="success">Thank you! Your RSVP has been received 💫</div>
+  </section>
+</main>
+
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const firstName = document.querySelector('input[name="firstName"]').value.trim();
+  const lastName = document.querySelector('input[name="lastName"]').value.trim();
+  const guests = document.querySelector('select[name="guests"]').value;
+
+  const message =
+    "🎂 Birthday RSVP\n\n" +
+    "👤 Name: " + firstName + "\n" +
+    "👤 Last Name: " + lastName + "\n" +
+    "👥 Guest Count: " + guests;
+
+  const whatsappLink =
+    "https://wa.me/37496009229?text=" + encodeURIComponent(message);
+
+  window.location.href = whatsappLink;
+});
+</script>
+</body>
+</html>
