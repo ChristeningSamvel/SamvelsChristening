@@ -1,5 +1,5 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body {
-  background-image: url("./background.jpeg");
+  background-image: url("./background1.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -20,7 +20,7 @@ footer {
   visibility: visible !important;
 }
 body {
-  background-image: url("./background.jpeg");
+  background-image: url("./background1.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -35,7 +35,7 @@ body {
 /* ===== НАСТРОЙКА ФОНА И ТЕКСТА ===== */
 
 body {
-  background-image: url("./background.jpeg") !important;
+  background-image: url("./background1.jpeg") !important;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
